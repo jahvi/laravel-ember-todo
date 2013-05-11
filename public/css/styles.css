@@ -1,0 +1,146 @@
+/* ===========================================================
+* Filename: styles.css
+* Description: Main application styles
+* Version: 0.1.0
+* Author: Javier Villanueva
+* =========================================================== */
+
+body {
+    background: #f9f9f9;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #f9f9f9)) 0 4px;
+    background: -webkit-linear-gradient(top, #d9eaf3 0%, #f9f9f9 8%) 0 4px;
+    background: -moz-linear-gradient(top, #d9eaf3 0%, #f9f9f9 8%) 0 4px;
+    background: -ms-linear-gradient(top, #d9eaf3 0%, #f9f9f9 8%) 0 4px;
+    background: -o-linear-gradient(top, #d9eaf3 0%, #f9f9f9 8%) 0 4px;
+    background: linear-gradient(top, #d9eaf3 0%, #f9f9f9 8%) 0 4px;
+
+    -webkit-background-size: 100% 20px;
+    -moz-background-size: 100% 20px;
+    -ms-background-size: 100% 20px;
+    -o-background-size: 100% 20px;
+    background-size: 100% 20px;
+}
+
+body:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    top: 0;
+    left: 30px;
+    bottom: 0;
+    border: 1px solid;
+    border-color: transparent #efe4e4;
+}
+
+.app-header {
+    margin: 40px 0 20px;
+    text-align: center;
+}
+
+.app-title {
+    color: #707070;
+    font-size: 4em;
+    text-shadow: #dddddd -1px -1px;
+}
+
+.main {
+    padding: 1em;
+    border: 1px solid #e2e2e2;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: #e2e2e2 0 0 6px;
+}
+
+input.input-todo {
+    padding: 1em .5em;
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
+.todo-list {
+    font-size: 1.2em;
+}
+
+.todo-list li {
+    margin-bottom: 10px;
+}
+
+input.todo-checkbox {
+    float: left;
+    margin: -8px 10px 0 0;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+.todo-checkbox:after {
+    content: '✔';
+    font-size: 2em;
+    color: #d9d9d9;
+}
+
+.completed .todo-checkbox:after {
+    color: #85ADA7;
+}
+
+.completed .todo {
+    color: #dddddd;
+    text-decoration: line-through;
+}
+
+.todo {
+    float: left;
+    width: 88%;
+    color: #777777;
+}
+
+.delete {
+    float: right;
+    padding: 0;
+    border: none;
+    background: none;
+    display: none;
+}
+
+.todo-list li:hover .delete {
+    display: block;
+}
+
+.details {
+    width: 86%;
+    padding: .5em 1em;
+    margin: 0 auto 20px;
+    color: #a0a0a0;
+    border: 1px solid #e2e2e2;
+    background: #f4f4f4;
+    border-radius: 0 0 2px 2px;
+}
+
+.filters {
+    margin: 0;
+}
+
+.filters li {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.filters a {
+    color: #a0a0a0;
+    text-decoration: none;
+}
+
+.filters .active {
+    font-weight: bold;
+}
+
+.info {
+    color: #a0a0a0;
+    font-size: .9em;
+    text-align: center;
+}
+
+.info a:hover {
+    text-decoration: none;
+}
