@@ -46,7 +46,7 @@
                 {{/if}}
                 </li>
             {{else}}
-                <p>Add some todos!</p>
+                <p>No todos to show here!</p>
             {{/each}}
             </ul>
         </div>
