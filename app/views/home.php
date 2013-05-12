@@ -52,7 +52,7 @@
         </div>
         <footer class="details clearfix">
             <span class="remaining pull-left">
-                <strong>1</strong> items left
+                {{{remainingFormatted}}}
             </span>
             <ul class="filters unstyled pull-right">
                 <li>
