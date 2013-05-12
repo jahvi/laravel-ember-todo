@@ -27,7 +27,7 @@
 		"preferred-install": "dist"
 	},
 	"minimum-stability": "dev",
-	"config":{
+	"config": {
 		"github-oauth": {
 			"github.com": "fafea7897cef210ca912161b28a6d4559f7a84ae"
 		}
