@@ -78,7 +78,7 @@ class TodosController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		return Todo::find($id)->delete();
 	}
 
 }

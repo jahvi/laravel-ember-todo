@@ -35,11 +35,11 @@
                 {{view Ember.TextField class="input-todo input-block-level" placeholder="What needs to be done?" valueBinding="todoText"}}
             </form>
             <ul class="todo-list unstyled">
-            {{#each todo in model}}
+            {{#each todo in model itemController="todo"}}
                 <li {{bindAttr class=":clearfix todo.isCompleted:completed"}}>
                     {{view Ember.Checkbox checkedBinding="todo.isCompleted" class="todo-checkbox"}}
                     <span class="todo">{{todo.text}}</span>
-                    <button class="delete"><i class="icon-trash"></i></button>
+                    <button class="delete" {{action "deleteTodo"}}><i class="icon-trash"></i></button>
                 </li>
             {{/each}}
             </ul>
@@ -70,6 +70,7 @@
     <script src="/js/router.js"></script>
     <script src="/js/store.js"></script>
     <script src="/js/models/todo.js"></script>
+    <script src="/js/controllers/todo.js"></script>
     <script src="/js/controllers/todos.js"></script>
 </body>
 </html>
