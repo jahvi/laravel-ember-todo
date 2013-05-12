@@ -31,8 +31,8 @@
 
     <script type="text/x-handlebars" id="todos">
         <div class="main">
-            <form action="">
-                <input type="text" class="input-todo input-block-level" placeholder="What needs to be done?">
+            <form {{action "createTodo" on="submit"}}>
+                {{view Ember.TextField class="input-todo input-block-level" placeholder="What needs to be done?" valueBinding="todoText"}}
             </form>
             <ul class="todo-list unstyled">
             {{#each todo in model}}

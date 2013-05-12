@@ -29,7 +29,12 @@ class TodosController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$data = Input::json()->all();
+
+		$todo = Todo::create($data['todo']);
+		$todo->save();
+
+		return $todo;
 	}
 
 	/**
