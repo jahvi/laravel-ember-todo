@@ -18,7 +18,7 @@ web1:
     - /app/storage/sessions
     - /app/storage/views
   after_build:
-    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar install --prefer-source"
+    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar install"
   before_deploy:
     - "php artisan migrate"
   after_deploy:
