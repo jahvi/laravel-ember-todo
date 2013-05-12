@@ -36,11 +36,15 @@
             </form>
             <ul class="todo-list unstyled">
             {{#each todo in model itemController="todo"}}
-                <li {{bindAttr class=":clearfix todo.isCompleted:completed"}}>
-                    {{view Ember.Checkbox checkedBinding="todo.isCompleted" class="todo-checkbox"}}
-                    <span class="todo">{{todo.text}}</span>
-                    <button class="delete" {{action "deleteTodo"}}><i class="icon-trash"></i></button>
-                </li>
+                {{#if isEditing}}
+                    {{view App.EditTodoView todoBinding="this"}}
+                {{else}}
+                    <li {{bindAttr class=":clearfix todo.isCompleted:completed"}}>
+                        {{view Ember.Checkbox checkedBinding="todo.isCompleted" class="todo-checkbox"}}
+                        <span class="todo" {{action "editTodo" on="doubleClick"}}>{{todo.text}}</span>
+                        <button class="delete" {{action "deleteTodo"}}><i class="icon-trash"></i></button>
+                    </li>
+                {{/if}}
             {{else}}
                 <p>Add some todos!</p>
             {{/each}}
@@ -74,5 +78,6 @@
     <script src="/js/models/todo.js"></script>
     <script src="/js/controllers/todo.js"></script>
     <script src="/js/controllers/todos.js"></script>
+    <script src="/js/views/edit_todo.js"></script>
 </body>
 </html>

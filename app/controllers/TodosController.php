@@ -67,7 +67,12 @@ class TodosController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$data = Input::json()->all();
+
+		$todo = Todo::find($id);
+		$todo->update($data['todo']);
+
+		return json_encode(array('todo' => $todo->toArray()));
 	}
 
 	/**
