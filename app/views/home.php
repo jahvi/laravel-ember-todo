@@ -41,6 +41,8 @@
                     <span class="todo">{{todo.text}}</span>
                     <button class="delete" {{action "deleteTodo"}}><i class="icon-trash"></i></button>
                 </li>
+            {{else}}
+                <p>Add some todos!</p>
             {{/each}}
             </ul>
         </div>
