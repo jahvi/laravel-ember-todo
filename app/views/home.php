@@ -62,7 +62,7 @@
                     {{#linkTo "todos.completed"}}Completed{{/linkTo}}
                 </li>
                 <li>
-                    <a href="#">Remaining</a>
+                    {{#linkTo "todos.remaining"}}Remaining{{/linkTo}}
                 </li>
             </ul>
         </footer>
