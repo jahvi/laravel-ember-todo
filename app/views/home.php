@@ -35,16 +35,16 @@
                 {{view Ember.TextField class="input-todo input-block-level" placeholder="What needs to be done?" valueBinding="todoText"}}
             </form>
             <ul class="todo-list unstyled">
-            {{#each todo in model itemController="todo"}}
+            {{#each filteredTodos itemController="todo"}}
+                <li {{bindAttr class=":clearfix isCompleted:completed"}}>
                 {{#if isEditing}}
                     {{view App.EditTodoView todoBinding="this"}}
                 {{else}}
-                    <li {{bindAttr class=":clearfix todo.isCompleted:completed"}}>
-                        {{view Ember.Checkbox checkedBinding="todo.isCompleted" class="todo-checkbox"}}
-                        <span class="todo" {{action "editTodo" on="doubleClick"}}>{{todo.text}}</span>
-                        <button class="delete" {{action "deleteTodo"}}><i class="icon-trash"></i></button>
-                    </li>
+                    {{view Ember.Checkbox checkedBinding="isCompleted" class="todo-checkbox"}}
+                    <span class="todo" {{action "editTodo" on="doubleClick"}}>{{text}}</span>
+                    <button class="delete" {{action "deleteTodo"}}><i class="icon-trash"></i></button>
                 {{/if}}
+                </li>
             {{else}}
                 <p>Add some todos!</p>
             {{/each}}
@@ -56,10 +56,10 @@
             </span>
             <ul class="filters unstyled pull-right">
                 <li>
-                    <a href="#" class="active">All</a>
+                    {{#linkTo "todos.index"}}All{{/linkTo}}
                 </li>
                 <li>
-                    <a href="#">Completed</a>
+                    {{#linkTo "todos.completed"}}Completed{{/linkTo}}
                 </li>
                 <li>
                     <a href="#">Remaining</a>
