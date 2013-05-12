@@ -9,8 +9,8 @@ web1:
     - pdo_mysql
     - mcrypt
     - eaccelerator
-    - memcached
     - curl
+    - zip
   shared_writable_dirs:
     - /app/storage/cache
     - /app/storage/logs
