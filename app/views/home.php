@@ -17,34 +17,7 @@
                     <header class="app-header">
                         <h1 class="app-title">todos</h1>
                     </header>
-                    <div class="main">
-                        <form action="">
-                            <input type="text" class="input-todo input-block-level" placeholder="What needs to be done?">
-                        </form>
-                        <ul class="todo-list unstyled">
-                            <li class="clearfix">
-                                <input type="checkbox" class="todo-checkbox">
-                                <span class="todo">Sample todo item asdf kajs asd asd asd asd asd</span>
-                                <button class="delete"><i class="icon-trash"></i></button>
-                            </li>
-                        </ul>
-                    </div>
-                    <footer class="details clearfix">
-                        <span class="remaining pull-left">
-                            <strong>1</strong> items left
-                        </span>
-                        <ul class="filters unstyled pull-right">
-                            <li>
-                                <a href="#" class="active">All</a>
-                            </li>
-                            <li>
-                                <a href="#">Completed</a>
-                            </li>
-                            <li>
-                                <a href="#">Remaining</a>
-                            </li>
-                        </ul>
-                    </footer>
+                    {{outlet}}
                 </div>
                 <div class="span6 offset3">
                     <div class="info">
@@ -56,10 +29,47 @@
         </div>
     </script>
 
+    <script type="text/x-handlebars" id="todos">
+        <div class="main">
+            <form action="">
+                <input type="text" class="input-todo input-block-level" placeholder="What needs to be done?">
+            </form>
+            <ul class="todo-list unstyled">
+            {{#each todo in model}}
+                <li {{bindAttr class=":clearfix todo.isCompleted:completed"}}>
+                    {{view Ember.Checkbox checkedBinding="todo.isCompleted" class="todo-checkbox"}}
+                    <span class="todo">{{todo.text}}</span>
+                    <button class="delete"><i class="icon-trash"></i></button>
+                </li>
+            {{/each}}
+            </ul>
+        </div>
+        <footer class="details clearfix">
+            <span class="remaining pull-left">
+                <strong>1</strong> items left
+            </span>
+            <ul class="filters unstyled pull-right">
+                <li>
+                    <a href="#" class="active">All</a>
+                </li>
+                <li>
+                    <a href="#">Completed</a>
+                </li>
+                <li>
+                    <a href="#">Remaining</a>
+                </li>
+            </ul>
+        </footer>
+    </script>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ember.js/1.0.0-rc.3/ember.js"></script>
+    <script src="//builds.emberjs.com.s3.amazonaws.com/ember-latest.js"></script>
     <script src="//builds.emberjs.com.s3.amazonaws.com/ember-data-latest.js"></script>
     <script src="/js/app.js"></script>
+    <script src="/js/router.js"></script>
+    <script src="/js/store.js"></script>
+    <script src="/js/models/todo.js"></script>
+    <script src="/js/controllers/todos.js"></script>
 </body>
 </html>
