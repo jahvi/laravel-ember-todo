@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Laravel 4 + EmberJS Todo App</title>
-    <meta name="description" content="A sample todo application build with Laravel 4 and EmberJS">
+    <meta name="description" content="A sample todo application built with Laravel 4 and EmberJS">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
