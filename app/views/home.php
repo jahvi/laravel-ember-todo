@@ -69,7 +69,7 @@
     </script>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.4/handlebars.min.js"></script>
     <script src="//builds.emberjs.com.s3.amazonaws.com/ember-latest.js"></script>
     <script src="//builds.emberjs.com.s3.amazonaws.com/ember-data-latest.js"></script>
     <script src="/js/app.js"></script>
