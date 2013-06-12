@@ -35,7 +35,7 @@
                 {{view Ember.TextField class="input-todo input-block-level" placeholder="What needs to be done?" valueBinding="todoText"}}
             </form>
             <ul class="todo-list unstyled">
-            {{#each filteredTodos itemController="todo"}}
+            {{#each model itemController="todo"}}
                 <li {{bindAttr class=":clearfix isCompleted:completed"}}>
                 {{#if isEditing}}
                     {{view App.EditTodoView todoBinding="this"}}

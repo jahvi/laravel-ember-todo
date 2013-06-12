@@ -7,16 +7,10 @@ App.Router.map(function () {
     });
 });
 
-App.TodosRoute = Ember.Route.extend({
-    model: function () {
-        return App.Todo.find();
-    }
-});
-
 App.TodosIndexRoute = Ember.Route.extend({
     setupController: function () {
         var todos = App.Todo.find();
-        this.controllerFor('todos').set('filteredTodos', todos);
+        this.controllerFor('todos').set('model', todos);
     }
 });
 
@@ -28,7 +22,7 @@ App.TodosCompletedRoute = Ember.Route.extend({
             }
         });
 
-        this.controllerFor('todos').set('filteredTodos', todos);
+        this.controllerFor('todos').set('model', todos);
     }
 });
 
@@ -40,6 +34,6 @@ App.TodosRemainingRoute = Ember.Route.extend({
             }
         });
 
-        this.controllerFor('todos').set('filteredTodos', todos);
+        this.controllerFor('todos').set('model', todos);
     }
 });
