@@ -8,7 +8,7 @@ A sample todo application built with Laravel 4 and EmberJS
 
 - Laravel 4 Beta 4 (Commit [086f296](https://github.com/laravel/laravel/tree/086f2966c023b8208441e6e17045ffded577c023))
 - jQuery 1.9.1
-- Handlebars 1.0.0-rc.4
+- Handlebars 1.0.0
 - EmberJS ([Latest](http://builds.emberjs.com.s3.amazonaws.com/ember-latest.js))
 - Ember Data ([Latest](http://builds.emberjs.com.s3.amazonaws.com/ember-data-latest.js))
 
