@@ -22,7 +22,9 @@
                 <div class="span6 offset3">
                     <div class="info">
                         <p>Double-click a todo to edit</p>
-                        <p>Created by <a href="https://twitter.com/jahvi" target="_blank">@jahvi</a></p>
+                        <p>
+                            Created by <a href="https://twitter.com/jahvi" target="_blank">@jahvi</a> - <a href="https://github.com/jahvi/laravel-ember-todo">Source code</a>
+                        </p>
                     </div>
                 </div>
             </div>
