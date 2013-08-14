@@ -2,7 +2,7 @@
 
 A sample todo application built with Laravel 4 and EmberJS
 
-[Demo](http://laravel-emberjs-todo.pagodabox.com/)
+[Demo](http://laravel-emberjs-todo.gopagoda.com/)
 
 ### Stuff used
 
