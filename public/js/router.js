@@ -7,6 +7,12 @@ App.Router.map(function () {
     });
 });
 
+App.TodosRoute = Ember.Route.extend({
+    model: function () {
+        return App.Todo.find();
+    }
+});
+
 App.TodosIndexRoute = Ember.Route.extend({
     setupController: function () {
         var todos = App.Todo.find();
