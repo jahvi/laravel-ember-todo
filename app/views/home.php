@@ -37,7 +37,7 @@
                 {{view Ember.TextField class="input-todo input-block-level" placeholder="What needs to be done?" valueBinding="todoText"}}
             </form>
             <ul class="todo-list unstyled">
-            {{#each model itemController="todo"}}
+            {{#each controller itemController="todo"}}
                 <li {{bindAttr class=":clearfix isCompleted:completed"}}>
                 {{#if isEditing}}
                     {{view App.EditTodoView todoBinding="this"}}
@@ -68,7 +68,7 @@
                 </li>
             </ul>
             <span class="order pull-right">
-                Order <a href="#" class="order-direction">▲</a>
+                Order <a href="#" class="order-direction" {{action "orderToggle"}}>▲</a>
             </span>
         </footer>
     </script>
