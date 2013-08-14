@@ -67,6 +67,9 @@
                     {{#linkTo "todos.remaining"}}Remaining{{/linkTo}}
                 </li>
             </ul>
+            <span class="order pull-right">
+                Order <a href="#" class="order-direction">▲</a>
+            </span>
         </footer>
     </script>
 

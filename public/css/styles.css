@@ -107,6 +107,7 @@ input.todo-checkbox {
 }
 
 .details {
+    position: relative;
     width: 86%;
     padding: .5em 1em;
     margin: 0 auto 20px;
@@ -117,7 +118,11 @@ input.todo-checkbox {
 }
 
 .filters {
+    position: absolute;
+    left: 0;
+    right: 0;
     margin: 0;
+    text-align: center;
 }
 
 .filters li {
@@ -132,6 +137,14 @@ input.todo-checkbox {
 
 .filters .active {
     font-weight: bold;
+}
+
+.order {
+    position: relative;
+}
+
+.order a {
+    text-decoration: none;
 }
 
 .info {
