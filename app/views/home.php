@@ -68,7 +68,7 @@
                 </li>
             </ul>
             <span class="order pull-right">
-                Order <a href="#" class="order-direction" {{action "orderToggle"}}>▲</a>
+                Order <a href="#" {{bindAttr class=":order-direction orderAsc:ascending"}} {{action "orderToggle"}}></a>
             </span>
         </footer>
     </script>

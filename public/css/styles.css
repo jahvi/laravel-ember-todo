@@ -143,8 +143,16 @@ input.todo-checkbox {
     position: relative;
 }
 
-.order a {
+.order-direction:hover {
     text-decoration: none;
+}
+
+.order-direction:after {
+    content: "▼";
+}
+
+.order-direction.ascending:after {
+    content: "▲";
 }
 
 .info {
