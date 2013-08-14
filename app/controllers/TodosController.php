@@ -24,7 +24,7 @@ class TodosController extends \BaseController {
 		$todo = Todo::create($data['todo']);
 		$todo->save();
 
-		return $todo;
+		return json_encode(array('todo' => $todo->toArray()));
 	}
 
 	/**
