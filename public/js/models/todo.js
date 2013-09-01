@@ -1,4 +1,4 @@
-/* global App, Ember */
+/* global App, Ember, DS */
 
 App.Todo = DS.Model.extend({
     text: DS.attr('string'),

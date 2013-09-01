@@ -75,8 +75,8 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.min.js"></script>
-    <script src="//builds.emberjs.com.s3.amazonaws.com/ember-latest.js"></script>
-    <script src="//builds.emberjs.com.s3.amazonaws.com/ember-data-latest.js"></script>
+    <script src="//builds.emberjs.com.s3.amazonaws.com/ember-1.0.0-rc.7.js"></script>
+    <script src="//builds.emberjs.com.s3.amazonaws.com/ember-data-0.13.js"></script>
     <script src="/js/app.js"></script>
     <script src="/js/router.js"></script>
     <script src="/js/store.js"></script>
