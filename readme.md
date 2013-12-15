@@ -6,7 +6,7 @@ A sample todo application built with Laravel 4 and EmberJS
 
 ### Stuff used
 
-- Laravel 4 Beta 4 (Commit [086f296](https://github.com/laravel/laravel/tree/086f2966c023b8208441e6e17045ffded577c023))
+- Laravel 4.1
 - jQuery 1.9.1
 - Handlebars 1.0.0
 - EmberJS ([1.0.0-RC.7](http://builds.emberjs.com.s3.amazonaws.com/ember-1.0.0-rc.7.js))
