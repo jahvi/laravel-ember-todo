@@ -2,5 +2,5 @@
 /vendor
 /app/config/local
 composer.phar
-composer.lock
 .DS_Store
+Thumbs.db
