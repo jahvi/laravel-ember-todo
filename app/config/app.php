@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://laravel-emberjs-todo.gopagoda.com',
 
 	/*
 	|--------------------------------------------------------------------------
