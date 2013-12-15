@@ -3,13 +3,32 @@
 class TodosController extends \BaseController {
 
 	/**
+	 * Todo instance
+	 *
+	 * @var Todo
+	 */
+	protected $todo;
+
+	/**
+	 * Create new instance of Todo using inflection
+	 *
+	 * @param Todo $todo
+	 */
+	public function __construct(Todo $todo)
+	{
+		$this->todo = $todo;
+	}
+
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		return json_encode(array('todos' => Todo::all()->toArray()));
+		$todos = $this->todo->all()->toArray();
+
+		return Response::json(compact('todos'));
 	}
 
 	/**
@@ -19,12 +38,12 @@ class TodosController extends \BaseController {
 	 */
 	public function store()
 	{
-		$data = Input::json()->all();
+		$data = Input::get('todo');
 
-		$todo = Todo::create($data['todo']);
-		$todo->save();
+		$todo = $this->todo->create($data);
+		$todo = $todo->toArray();
 
-		return json_encode(array('todo' => $todo->toArray()));
+		return Response::json(compact('todo'), 201);
 	}
 
 	/**
@@ -35,12 +54,13 @@ class TodosController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$data = Input::json()->all();
+		$data = Input::get('todo');
+		$todo = $this->todo->findOrFail($id);
 
-		$todo = Todo::find($id);
-		$todo->update($data['todo']);
+		$todo->update($data);
+		$todo = $todo->toArray();
 
-		return json_encode(array('todo' => $todo->toArray()));
+		return Response::json(compact('todo'));
 	}
 
 	/**
@@ -51,7 +71,9 @@ class TodosController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		return Todo::find($id)->delete();
+		$this->todo->destroy($id);
+
+		return Response::make(null, 204);
 	}
 
 }
