@@ -40,7 +40,7 @@
             {{#each controller itemController="todo"}}
                 <li {{bindAttr class=":clearfix is_completed:completed"}}>
                 {{#if isEditing}}
-                    {{view App.EditTodoView todoBinding="this"}}
+                    {{edit-todo class="input-block-level" value=bufferedText insert-newline="doneEditing" focus-out="cancelEditing" escape-press="cancelEditing"}}
                 {{else}}
                     {{input type="checkbox" class="todo-checkbox" checked=is_completed}}
                     <span class="todo" {{action "editTodo" on="doubleClick"}}>{{text}}</span>
