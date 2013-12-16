@@ -1,5 +1,3 @@
 /* global Ember */
 
-(function (window) {
-    var App = window.App = Ember.Application.create();
-})(this);
+window.App = Ember.Application.create();

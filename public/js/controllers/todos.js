@@ -12,7 +12,7 @@ App.TodosController = Ember.ArrayController.extend({
 
         App.Todo.createRecord({
             text: todoText,
-            isCompleted: false
+            is_completed: false
         });
 
         this.set('todoText', '');
@@ -21,8 +21,8 @@ App.TodosController = Ember.ArrayController.extend({
     },
 
     remaining: function () {
-        return this.filterProperty('isCompleted', false).get('length');
-    }.property('@each.isCompleted'),
+        return this.filterProperty('is_completed', false).get('length');
+    }.property('@each.is_completed'),
 
     remainingFormatted: function () {
         var remainingTodos = this.get('remaining'),
