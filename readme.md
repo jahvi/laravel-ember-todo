@@ -9,8 +9,8 @@ A sample todo application built with Laravel 4 and EmberJS
 - Laravel 4.1
 - jQuery 1.9.1
 - Handlebars 1.0.0
-- EmberJS ([1.0.0-RC.7](http://builds.emberjs.com.s3.amazonaws.com/ember-1.0.0-rc.7.js))
-- Ember Data ([0.13](http://builds.emberjs.com.s3.amazonaws.com/ember-data-0.13.js))
+- EmberJS ([1.2](http://builds.emberjs.com/tags/v1.2.0/ember.js))
+- Ember Data ([1.0.0 Beta 3](http://builds.emberjs.com/tags/v1.0.0-beta.3/ember-data.js))
 
 ### How to use
 
@@ -18,6 +18,10 @@ A sample todo application built with Laravel 4 and EmberJS
 2. Run `composer install`
 3. Run `php artisan migrate` (Make sure to set your database credentials in the [database.php](https://github.com/jahvi/laravel-ember-todo/blob/master/app/config/database.php) file)
 4. Enjoy
+
+### Known issues
+
+- Todos marked as completed aren't persisted in the database
 
 ### Contributing
 
