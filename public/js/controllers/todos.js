@@ -3,21 +3,26 @@
 App.TodosController = Ember.ArrayController.extend({
     orderAsc: true,
 
-    createTodo: function () {
-        var todoText = this.get('todoText');
+    actions: {
+        createTodo: function () {
+            var todoText, todo;
 
-        if (!todoText) {
-            return;
+            todoText = this.get('todoText').trim();
+
+            if (!todoText) {
+                return;
+            }
+
+            todo = this.store.createRecord('todo', {
+                text: todoText,
+                is_completed: false
+            });
+
+            todo.save();
+
+            this.set('todoText', '');
         }
 
-        App.Todo.createRecord({
-            text: todoText,
-            is_completed: false
-        });
-
-        this.set('todoText', '');
-
-        this.get('store').commit();
     },
 
     remaining: function () {
