@@ -42,7 +42,7 @@
                 {{#if isEditing}}
                     {{view App.EditTodoView todoBinding="this"}}
                 {{else}}
-                    {{view Ember.Checkbox checkedBinding="is_completed" class="todo-checkbox"}}
+                    {{input type="checkbox" class="todo-checkbox" checked=is_completed}}
                     <span class="todo" {{action "editTodo" on="doubleClick"}}>{{text}}</span>
                     <button class="delete" {{action "deleteTodo"}}><i class="icon-trash"></i></button>
                 {{/if}}

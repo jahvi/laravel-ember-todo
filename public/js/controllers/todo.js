@@ -3,14 +3,17 @@
 App.TodoController = Ember.ObjectController.extend({
     isEditing: false,
 
-    deleteTodo: function () {
-        var todo = this.get('model');
+    actions: {
+        deleteTodo: function () {
+            var todo = this.get('model');
 
-        todo.deleteRecord();
-        todo.get('store').commit();
-    },
+            todo.deleteRecord();
+            todo.save();
+        },
 
-    editTodo: function () {
-        this.set('isEditing', true);
+        editTodo: function () {
+            this.set('isEditing', true);
+        }
     }
+
 });
