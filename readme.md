@@ -19,10 +19,6 @@ A sample todo application built with Laravel 4 and EmberJS
 3. Run `php artisan migrate` (Make sure to set your database credentials in the [database.php](https://github.com/jahvi/laravel-ember-todo/blob/master/app/config/database.php) file)
 4. Enjoy
 
-### Known issues
-
-- Todos marked as completed aren't persisted in the database
-
 ### Contributing
 
 Feel free to send PRs and fork hard

@@ -38,11 +38,11 @@
             </form>
             <ul class="todo-list unstyled">
             {{#each controller itemController="todo"}}
-                <li {{bind-attr class=":clearfix is_completed:completed"}}>
+                <li {{bind-attr class=":clearfix isCompleted:completed"}}>
                 {{#if isEditing}}
                     {{edit-todo class="input-block-level" value=bufferedText insert-newline="doneEditing" focus-out="cancelEditing" escape-press="cancelEditing"}}
                 {{else}}
-                    {{input type="checkbox" class="todo-checkbox" checked=is_completed}}
+                    {{input type="checkbox" class="todo-checkbox" checked=isCompleted}}
                     <span class="todo" {{action "editTodo" on="doubleClick"}}>{{text}}</span>
                     <button class="delete" {{action "deleteTodo"}}><i class="icon-trash"></i></button>
                 {{/if}}
