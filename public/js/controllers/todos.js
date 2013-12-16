@@ -21,8 +21,14 @@ App.TodosController = Ember.ArrayController.extend({
             todo.save();
 
             this.set('todoText', '');
-        }
+        },
 
+        orderToggle: function () {
+            this.set('sortProperties', ['text']);
+            this.set('sortAscending', this.get('orderAsc'));
+
+            this.set('orderAsc', !this.get('orderAsc'));
+        }
     },
 
     remaining: function () {
@@ -36,10 +42,4 @@ App.TodosController = Ember.ArrayController.extend({
         return '<strong>%@</strong> %@ left'.fmt(remainingTodos, todoPlural);
     }.property('remaining'),
 
-    orderToggle: function () {
-        this.set('sortProperties', ['text']);
-        this.set('sortAscending', this.get('orderAsc'));
-
-        this.set('orderAsc', !this.get('orderAsc'));
-    }
 });
