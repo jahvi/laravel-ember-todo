@@ -18,6 +18,7 @@ App.TodoController = Ember.ObjectController.extend({
         },
 
         cancelEditing: function() {
+            this.set('bufferedText', this.get('text'));
             this.set('isEditing', false);
         },
 
