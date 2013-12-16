@@ -75,8 +75,8 @@
 
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script>
-    <script src="//builds.emberjs.com/tags/v1.2.0/ember.js"></script>
-    <script src="//builds.emberjs.com/tags/v1.0.0-beta.3/ember-data.js"></script>
+    <script src="//builds.emberjs.com/tags/v1.2.0/ember.min.js"></script>
+    <script src="//builds.emberjs.com/tags/v1.0.0-beta.3/ember-data.min.js"></script>
     <script src="/js/app.js"></script>
     <script src="/js/router.js"></script>
     <script src="/js/models/todo.js"></script>
