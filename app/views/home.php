@@ -38,7 +38,7 @@
             </form>
             <ul class="todo-list unstyled">
             {{#each controller itemController="todo"}}
-                <li {{bindAttr class=":clearfix is_completed:completed"}}>
+                <li {{bind-attr class=":clearfix is_completed:completed"}}>
                 {{#if isEditing}}
                     {{edit-todo class="input-block-level" value=bufferedText insert-newline="doneEditing" focus-out="cancelEditing" escape-press="cancelEditing"}}
                 {{else}}
@@ -58,17 +58,17 @@
             </span>
             <ul class="filters unstyled pull-right">
                 <li>
-                    {{#linkTo "todos.index"}}All{{/linkTo}}
+                    {{#link-to "todos.index"}}All{{/link-to}}
                 </li>
                 <li>
-                    {{#linkTo "todos.completed"}}Completed{{/linkTo}}
+                    {{#link-to "todos.completed"}}Completed{{/link-to}}
                 </li>
                 <li>
-                    {{#linkTo "todos.remaining"}}Remaining{{/linkTo}}
+                    {{#link-to "todos.remaining"}}Remaining{{/link-to}}
                 </li>
             </ul>
             <span class="order pull-right">
-                Order <a href="#" {{bindAttr class=":order-direction orderAsc:ascending"}} {{action "orderToggle"}}></a>
+                Order <a href="#" {{bind-attr class=":order-direction orderAsc:ascending"}} {{action "orderToggle"}}></a>
             </span>
         </footer>
     </script>
