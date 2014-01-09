@@ -74,7 +74,7 @@
     </script>
 
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script>
+    <script src="//builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v1.3.0.js"></script>
     <script src="//builds.emberjs.com/tags/v1.3.0/ember.min.js"></script>
     <script src="//builds.emberjs.com/tags/v1.0.0-beta.4/ember-data.min.js"></script>
     <script src="/js/app.js"></script>
