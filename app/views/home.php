@@ -34,7 +34,7 @@
     <script type="text/x-handlebars" id="todos">
         <div class="main">
             <form {{action "createTodo" on="submit"}}>
-                {{input class="input-todo input-block-level" placeholder="What needs to be done?" value=todoText}}
+                {{input id="new-todo" class="input-todo input-block-level" placeholder="What needs to be done?" value=todoText}}
             </form>
             <ul class="todo-list unstyled">
             {{#each controller itemController="todo"}}
@@ -83,6 +83,7 @@
     <script src="/js/controllers/todo.js"></script>
     <script src="/js/controllers/todos.js"></script>
     <script src="/js/views/edit_todo.js"></script>
+    <script src="/js/views/todos_view.js"></script>
     <script src="/js/helpers/pluralize.js"></script>
 </body>
 </html>
