@@ -73,10 +73,10 @@
         </footer>
     </script>
 
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v1.3.0.js"></script>
-    <script src="//builds.emberjs.com/tags/v1.3.0/ember.min.js"></script>
-    <script src="//builds.emberjs.com/tags/v1.0.0-beta.4/ember-data.min.js"></script>
+    <script src="//builds.emberjs.com/tags/v1.3.1/ember.js"></script>
+    <script src="//builds.emberjs.com/tags/v1.0.0-beta.6/ember-data.js"></script>
     <script src="/js/app.js"></script>
     <script src="/js/router.js"></script>
     <script src="/js/models/todo.js"></script>
