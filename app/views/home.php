@@ -54,7 +54,7 @@
         </div>
         <footer class="details clearfix">
             <span class="remaining pull-left">
-                {{{remainingFormatted}}}
+                <strong>{{ remaining.length }}</strong> {{ pluralize 'item' remaining.length }} left
             </span>
             <ul class="filters unstyled pull-right">
                 <li>
@@ -83,5 +83,6 @@
     <script src="/js/controllers/todo.js"></script>
     <script src="/js/controllers/todos.js"></script>
     <script src="/js/views/edit_todo.js"></script>
+    <script src="/js/helpers/pluralize.js"></script>
 </body>
 </html>
