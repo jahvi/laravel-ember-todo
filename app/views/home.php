@@ -54,7 +54,7 @@
         </div>
         <footer class="details clearfix">
             <span class="remaining pull-left">
-                <strong>{{ remaining.length }}</strong> {{ pluralize 'item' remaining.length }} left
+                <strong>{{remaining.length}}</strong> {{pluralize 'item' remaining.length}} left
             </span>
             <ul class="filters unstyled pull-right">
                 <li>
